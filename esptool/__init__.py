@@ -850,6 +850,7 @@ def main(argv=None, esp=None):
                 flash_size = args.flash_size
 
             if flash_size is not None:  # Secure download mode
+                print(f"Flash1 params set to {flash_size}")
                 esp.flash_set_parameters(flash_size_bytes(flash_size))
                 # Check if stub supports chosen flash size
                 if (

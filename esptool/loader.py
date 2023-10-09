@@ -436,6 +436,7 @@ class ESPLoader(object):
 
         Returns the "result" of a successful command.
         """
+        print("Command: %s with timeout %s" % (op_description, timeout))
         val, data = self.command(op, data, chk, timeout=timeout)
 
         # things are a bit weird here, bear with us
